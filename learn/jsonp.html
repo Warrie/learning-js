@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="刷新" id="b1">
+    <div id="price">
+
+    </div>
+    <script>
+        function refreshPrice(data){
+            console.log(data);
+            var p=document.getElementById('price');
+            p.innerHTML='当前价格：'+data['0000001'].name;
+        }
+        
+        var oBtn=document.getElementById('b1');
+        oBtn.onclick=function(){
+            var s=document.createElement('script');
+            s.type='text/javascript';
+            s.src='http://api.money.126.net/data/feed/0000001,1399001?callback=refreshPrice';
+            document.getElementsByTagName('head')[0].appendChild(s);
+        }
+        
+    </script>
+</body>
+</html>

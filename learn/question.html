@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #d1{
+            background:lightcoral;
+            
+            position: absolute;
+            width:100%;
+            top:0;
+            left:0;
+            bottom:10px;
+            right:0;
+           
+        }
+        /* #d11{
+            background: ivory;
+            height: 80%;
+        } */
+        #con{
+            height: 5000px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <button id="btn1">点击</button> -->
+    <div id="d1">
+        <div id="d11"></div>
+    
+    </div>
+
+    <div id="con"></div>
+
+    <script>
+        var oBtn=document.getElementById('btn1');
+        var oDiv1=document.getElementById('d1');
+        
+        
+        window.onscroll=function(){
+            // alert("滚动");
+            var scrollTop=document.body.scrollTop==0?document.documentElement.scrollTop:document.body.scrollTop;
+            // oDiv1.style.height= window.innerHeight+'px';
+              oDiv1.style.top=scrollTop+'px';
+              console.log('top==='+oDiv1.style.top)
+              oDiv1.style.bottom=scrollTop+document.body.clientHeight+'px';
+              console.log('bottom==='+oDiv1.style.bottom)
+            // oDiv1.style.height=document.body.clientHeight+'px';
+              console.log(document.body.scrollTop)
+              console.log(document.documentElement.scrollTop)
+            // setInterval(function(){
+            //     console.log(window.scrollX)
+            //   oDiv1.style.height= window.innerHeight+'px';
+            //   oDiv1.style.top=document.body.scrollTop+'px';
+            // },30)
+        }
+    </script>
+</body>
+</html>
