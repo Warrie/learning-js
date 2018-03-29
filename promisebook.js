@@ -60,7 +60,8 @@ function book(){
             console.log(`p2movie--resolve`);
         })
     });
-    return Promise.all([p1,p2]).then((uid,mid)=>{
+    return Promise.all([p1,p2]).then((result)=>{
+        console.log(`result==${result}`)
         console.log(`p1,p2全部结束,进入总的回调函数，传入userid=${uid},movie=${mid}`)
         var p3=new Promise((resolve,reject)=>{
             console.log(`开始进行预订函数的pro`)

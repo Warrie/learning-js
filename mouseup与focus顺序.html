@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="p1" placeholder="shuru">
+    <p id="con"></p>
+
+    <script>
+        var oP=document.getElementById('p1');
+        var oP1=document.getElementById('con');
+        oP.onmousedown=function(){
+            oP1.textContent+='mousedown<br>';
+        }
+        oP.onmouseup=function(){
+            oP1.textContent+='mouseup<br>';
+        }
+        oP.onfocus=function(){
+            oP1.textContent+='focus<br>';
+        }
+        oP.onclick=function(){
+            oP1.textContent+='click<br>';
+        }
+    </script>
+</body>
+</html>
