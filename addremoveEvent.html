@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d1">111111</div>
+    <button id="myBtn">click</button>
+    <script>
+        var oDiv=document.getElementById('d1');
+        function al(event){
+            alert(event);
+        }
+        oDiv.addEventListener('click',al,false);
+        oDiv.removeEventListener('click',al,false);
+
+        var btn = document.getElementById("myBtn");
+
+        btn.addEventListener("click", function () {
+        alert(this.id);
+        }, false);  
+        btn.addEventListener("click", function () {
+        alert("Hello World");
+        }, false);
+    </script>
+</body>
+</html>
