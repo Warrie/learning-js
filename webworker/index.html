@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>webWorker</title>
+</head>
+<body>
+    <script>
+        var worker = new Worker("worker.js");//读取文件开线程
+        worker.postMessage("123456");//给线程传数据
+
+        worker.onmessage = function (e) {
+            console.log(e.data)
+        };
+    </script>
+</body>
+</html>
